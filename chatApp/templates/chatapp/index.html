@@ -11,11 +11,34 @@
         rel="stylesheet"
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous"
         />
-    
+
   </head>
   <body>
+    <div class="container">
+      <div class="container row text-center p-4 bg-info">
+        <div class="col-12 ">
+          <h1 class="display-6">Django Room Chat</h1>
+        </div>
+      </div>
+      <div class="container m-4 row d-flex align-items-center justify-content-center">
+        <div class="col-12 w-50 bg-light">
+          <form class="form" action="index" method="post">
+            {% csrf_token %}
+            <label for="username" class="form-label">Username</label>
+            <input type="text" name="username" class="form-control"><br>
+            <label for="room_name" class="form-label">Room name</label>
+            <input type="text" name="room_name" class="form-control">
+            <div class="form-text">Enter name of existing room or enter to create a new room</div>
+            <div class="row w-100 mt-4 justify-content-center">
+              <div class="col-auto">
+                <input type="submti" value="Enter Room" class="btn btn-outline-info">
+              </div>
+            </div>
+          </form>
 
-
+        </div>
+      </div>
+    </div>
 
 
 
